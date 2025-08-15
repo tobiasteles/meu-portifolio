@@ -1,0 +1,32 @@
+<!-- tt-icon.svg -->
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tobias Teles monograma TT">
+  <defs>
+    <!-- Gradiente azul -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9"></stop>
+      <stop offset="100%" stop-color="#1D4ED8"></stop>
+    </linearGradient>
+
+    <!-- Sombra suave -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.25"></feDropShadow>
+    </filter>
+  </defs>
+
+  <!-- Fundo arredondado -->
+  <rect x="24" y="24" width="464" height="464" rx="96" fill="url(#bg)" filter="url(#softShadow)"></rect>
+
+  <!-- Monograma TT (construído com formas, sem fontes) -->
+  <g fill="#FFFFFF">
+    <!-- T esquerdo -->
+    <rect x="112" y="148" width="144" height="40" rx="12"></rect>
+    <rect x="168" y="188" width="32" height="176" rx="12"></rect>
+
+    <!-- T direito -->
+    <rect x="256" y="148" width="144" height="40" rx="12" opacity="0.95"></rect>
+    <rect x="312" y="188" width="32" height="176" rx="12" opacity="0.95"></rect>
+  </g>
+
+  <!-- Detalhe sutil de brilho -->
+  <ellipse cx="256" cy="120" rx="180" ry="60" fill="#FFFFFF" opacity="0.08"></ellipse>
+</svg>
