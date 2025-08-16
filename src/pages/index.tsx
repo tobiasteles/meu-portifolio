@@ -1,8 +1,14 @@
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+
 const Index = () => {
     return (
-        <div>
-            Pagina inicial
-        </div>
+        <div className="min-h-screen">
+            <Header />
+            <main>
+                <Hero />
+            </main>
+        </div> 
     )
 }
 
