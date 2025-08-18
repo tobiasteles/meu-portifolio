@@ -15,9 +15,9 @@ const Hero = () => {
     >
       {/* background decorativo */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
         <div
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-float"
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-float"
           style={{ animationDelay: "1s" }}
         ></div>
       </div>
@@ -30,13 +30,13 @@ const Hero = () => {
               <img
                 src={profilePhoto}
                 alt="Tobias Teles - Desenvolvedor Front-end"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-primary/20 shadow-lg object-cover"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-blue-500/20 shadow-lg object-cover"
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-primary bg-clip-text">
+              <span className="bg-gradient-blue-500 bg-clip-text">
                 Tobias Teles
               </span>
             </h1>
@@ -53,7 +53,7 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-gradient-primary hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-blue-500 hover:shadow-lg transition-all duration-300"
               onClick={() => scrollToSection("projetos")}
             >
               Ver Projetos
@@ -61,7 +61,7 @@ const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-blue-500-foreground transition-all duration-300"
             >
               <Download className="mr-2 h-5 w-5" />
               Download CV
@@ -74,15 +74,15 @@ const Hero = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">+5</div>
+              <div className="text-3xl font-bold text-blue-500 mb-2">+5</div>
               <div className="text-muted-foreground">Projetos Concluídos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">2024</div>
+              <div className="text-3xl font-bold text-blue-500 mb-2">2024</div>
               <div className="text-muted-foreground">Início da Jornada</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">100%</div>
+              <div className="text-3xl font-bold text-blue-500 mb-2">100%</div>
               <div className="text-muted-foreground">Dedicação</div>
             </div>
           </div>
@@ -97,7 +97,7 @@ const Hero = () => {
           onClick={() => scrollToSection("sobre")}
           className="rounded-full"
         >
-          <ArrowDown className="h-6 w-6 text-primary" />
+          <ArrowDown className="h-6 w-6 text-blue-500" />
         </Button>
       </div>
     </section>

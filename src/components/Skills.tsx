@@ -74,7 +74,7 @@ const Skills = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Minhas{" "}
-              <span className="bg-gradient-primary bg-clip-text">
+              <span className="bg-gradient-blue-500 bg-clip-text">
                 Habilidades
               </span>
             </h2>
@@ -131,7 +131,7 @@ const Skills = () => {
                 </p>
                 <div className="mt-6 flex flex-wrap justify-center gap-3">
                 {["TypeScript", "Node.js", "Next.js", "React", "AWS"].map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-primary border border-primary">
+                    <Badge key={tech} variant="outline" className="text-blue-500 border border-blue-500">
                         {tech} (Estudando)
                     </Badge>
                 ))}

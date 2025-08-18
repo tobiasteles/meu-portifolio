@@ -9,7 +9,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Sobre{" "}
-              <span className="bg-gradient-primary bg-clip-text">Mim</span>
+              <span className="bg-gradient-blue-500 bg-clip-text">Mim</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Desenvolvedor apaixonado por tecnologia, sempre em busca de
@@ -46,17 +46,17 @@ const About = () => {
               </div>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-primary" />
+                  <MapPin className="h-5 w-5 text-blue-500" />
                   <span className="text-foreground">Brasília, DF - Brasil</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <GraduationCap className="h-5 w-5 text-primary" />
+                  <GraduationCap className="h-5 w-5 text-blue-500" />
                   <span className="text-foreground">
                     Analise e Desenvolvimento de Sistemas - UNINTER
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Globe className="h-5 w-5 text-primary" />
+                  <Globe className="h-5 w-5 text-blue-500" />
                   <span className="text-foreground">Inglês Avançado</span>
                 </div>
               </div>

@@ -16,38 +16,38 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-primary bg-clip-text ">
+          <div className="text-2xl font-bold bg-blue-500 bg-clip-text ">
             Tobias Teles
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("inicio")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-blue-500 transition-colors"
             >
               Início
             </button>
             <button
               onClick={() => scrollToSection("sobre")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-blue-500 transition-colors"
             >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection("habilidades")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-blue-500 transition-colors"
             >
               Habilidades
             </button>
             <button
               onClick={() => scrollToSection("projetos")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-blue-500 transition-colors"
             >
               Projetos
             </button>
             <button
               onClick={() => scrollToSection("contato")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-blue-500 transition-colors"
             >
               Contato
             </button>
@@ -79,19 +79,19 @@ const Header = () => {
         {isMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 border-t border-border pt-4">
                 <div className="flex flex-col space-y-4">
-                    <button onClick={() => scrollToSection("inicio")} className="text-left hover:text-primary transition-colors">
+                    <button onClick={() => scrollToSection("inicio")} className="text-left hover:text-blue-500 transition-colors">
                         Início
                     </button>
-                    <button onClick={() => scrollToSection("sobre")} className="text-left hover:text-primary transition-colors">
+                    <button onClick={() => scrollToSection("sobre")} className="text-left hover:text-blue-500 transition-colors">
                         Sobre
                     </button>
-                    <button onClick={() => scrollToSection("habilidades")} className="text-left hover:text-primary transition-colors">
+                    <button onClick={() => scrollToSection("habilidades")} className="text-left hover:text-blue-500 transition-colors">
                         Habilidades
                     </button>
-                    <button onClick={() => scrollToSection("projetos")} className="text-left hover:text-primary transition-colors">
+                    <button onClick={() => scrollToSection("projetos")} className="text-left hover:text-blue-500 transition-colors">
                         Projetos
                     </button>
-                    <button onClick={() => scrollToSection("contato")} className="text-left hover:text-primary transition-colors">
+                    <button onClick={() => scrollToSection("contato")} className="text-left hover:text-blue-500 transition-colors">
                         Contato
                     </button>
 

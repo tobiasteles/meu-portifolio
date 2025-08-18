@@ -64,7 +64,7 @@ const Projects = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Meus{" "}
-              <span className="bg-gradient-primary bg-clip-text">Projetos</span>
+              <span className="bg-gradient-blue-500 bg-clip-text">Projetos</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Alguns dos projetos que desenvolvi, demonstrando minhas
@@ -88,7 +88,7 @@ const Projects = () => {
                   </div>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <CardTitle className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl font-bold mb-3 text-foreground group-hover:text-blue-500 transition-colors">
                     {project.title}
                   </CardTitle>
 
@@ -107,7 +107,7 @@ const Projects = () => {
                   <div className="flex items-center gap-3">
                     <Button
                       size="sm"
-                      className="bg-gradient-primary hover:shadow-medium transition-all duration-300"
+                      className="bg-gradient-blue-500 hover:shadow-medium transition-all duration-300"
                       asChild
                     >
                       <a
@@ -122,7 +122,7 @@ const Projects = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-blue-500-foreground"
                       asChild
                     >
                       <a
@@ -152,7 +152,7 @@ const Projects = () => {
                 </p>
                 <Button
                   size="lg"
-                  className="bg-gradient-primary hover:shadow-medium transition-all duration-300"
+                  className="bg-gradient-blue-500 hover:shadow-medium transition-all duration-300"
                   onClick={() => {
                     const element = document.getElementById("contato");
                     element?.scrollIntoView({ behavior: "smooth" });
