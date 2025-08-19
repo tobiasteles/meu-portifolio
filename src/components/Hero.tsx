@@ -58,6 +58,7 @@ const Hero = () => {
             >
               Ver Projetos
             </Button>
+            <a href="/cv-tobias.pdf" download>
             <Button
               variant="outline"
               size="lg"
@@ -66,6 +67,7 @@ const Hero = () => {
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </Button>
+            </a>
           </div>
 
           {/* métricas */}
