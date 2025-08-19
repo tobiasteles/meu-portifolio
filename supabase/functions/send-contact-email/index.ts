@@ -1,6 +1,6 @@
 // @deno-types="npm:@types/resend"
-import { serve } from "https://deno.land/std@0.203.0/http/server.ts";
-import { Resend } from "npm:resend";
+import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
+import { Resend } from "resend";
 
 serve(async (req) => {
   // Configuração CORS
