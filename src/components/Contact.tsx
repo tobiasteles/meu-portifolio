@@ -1,14 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../integrations/supabase/client";
 import { toast } from "sonner";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-} from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -23,40 +16,30 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
+      // Primeiro salva no banco
       const { error: dbError } = await supabase
         .from("contact_messages")
         .insert([formData]);
 
-      if (dbError) {
-        throw new Error(dbError.message);
-      }
+      if (dbError) throw dbError;
 
-      // Get the current session to retrieve the access token
-      const { data: sessionData } = await supabase.auth.getSession();
-      const accessToken = sessionData?.session?.access_token;
-
-      const { data, error: emailError } = await supabase.functions.invoke(
+      // Chama a função edge sem autenticação
+      const { error: emailError } = await supabase.functions.invoke(
         "send-contact-email",
         {
-          body: JSON.stringify(formData),
-          headers: {
-            'Content-Type': 'application/json',
-            ...(accessToken && { 'Authorization': `Bearer ${accessToken}` })
-          }
+          body: formData, // Já é automaticamente convertido para JSON
         }
       );
 
-      if (emailError) {
-        throw new Error(emailError.message);
-      }
+      if (emailError) throw emailError;
 
       toast.success("Mensagem enviada com sucesso!");
-
       setFormData({
         name: "",
         email: "",
@@ -64,18 +47,14 @@ const Contact = () => {
         subject: "",
         message: "",
       });
-    } catch (error: unknown) {
-      if (error instanceof Error) {
-        console.error("Erro ao enviar mensagem:", error.message);
-      } else {
-        console.error("Erro ao enviar mensagem:", error);
-      }
-
-      toast.error("Erro ao enviar mensagem. Tente novamente mais tarde.");
+    } catch (error) {
+      console.error("Erro:", error);
+      toast.error("Erro ao enviar mensagem");
     } finally {
       setIsSubmitting(false);
     }
   };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -192,13 +171,13 @@ const Contact = () => {
                     </div>
                     <div>
                       <Textarea
-                      name="message"
-                      placeholder="Sua mensagem"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className="transition-all duration-300 focus:shadow-soft resize-none"
+                        name="message"
+                        placeholder="Sua mensagem"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        rows={5}
+                        className="transition-all duration-300 focus:shadow-soft resize-none"
                       />
                     </div>
                   </div>
