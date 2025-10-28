@@ -55,6 +55,36 @@ const Projects = () => {
       githubUrl: "https://github.com/tobiasteles",
       featured: true,
     },
+    {
+      title: "Calculadora React com TypeScript",
+      description:
+        "Coloquei em prática os conceitos de React Hooks e TypeScript desenvolvendo esta calculadora! Foi um projeto incrível para solidificar minha lógica de programação e entender o fluxo de estado em aplicações front-end.",
+      image: "/calculadora.png",
+      technologies: ["Vite", "React", "Tailwind CSS"],
+      liveUrl: "https://minhaadoravelcalculadora.netlify.app/",
+      githubUrl: "https://github.com/tobiasteles",
+      featured: true,
+    },
+    {
+      title: "Minha Bateria Virtual",
+      description:
+        "Desenvolvi essa bateria interativa onde você pode:  Reproduzir 9 sons diferentes de bateria, gravar suas sequências e reproduzir depois, ajustar volume e velocidade do playback, usar teclado ou mouse - fica a seu critério! ",
+      image: "/bateria.jpeg",
+      technologies: ["Vite", "React", "Tailwind CSS"],
+      liveUrl: "https://minhabateriavirtual.netlify.app/",
+      githubUrl: "https://github.com/tobiasteles",
+      featured: true,
+    },
+    {
+      title: "Vesiculos Bíblicos Aleatórios",
+      description:
+        "Trata-se de um gerador de versículos bíblicos com interface dinâmica e visualmente atraente.",
+      image: "/biblia.png",
+      technologies: ["Vite", "React", "Tailwind CSS"],
+      liveUrl: "https://versiculodabibila.netlify.app/",
+      githubUrl: "https://github.com/tobiasteles",
+      featured: true,
+    },
   ];
 
   return (
@@ -64,7 +94,9 @@ const Projects = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Meus{" "}
-              <span className="bg-gradient-blue-500 bg-clip-text">Projetos</span>
+              <span className="bg-gradient-blue-500 bg-clip-text">
+                Projetos
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Alguns dos projetos que desenvolvi, demonstrando minhas
