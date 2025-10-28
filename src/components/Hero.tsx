@@ -76,7 +76,7 @@ const Hero = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-500 mb-2">+5</div>
+              <div className="text-3xl font-bold text-blue-500 mb-2">+9</div>
               <div className="text-muted-foreground">Projetos Concluídos</div>
             </div>
             <div className="text-center">
